@@ -51,7 +51,7 @@ class CarAdapter (val listcar : ArrayList<Car>) : RecyclerView.Adapter<CarAdapte
     override fun getItemCount(): Int {
         return listcar.size
 
-    }
+    } 
 
 
 }

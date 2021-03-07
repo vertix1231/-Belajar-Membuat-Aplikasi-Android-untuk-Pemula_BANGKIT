@@ -5,8 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.LinearLayout
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +15,7 @@ import com.dicoding.bangkit.android.fundamental.carshowcase.MainActivity
 class MainActivity : AppCompatActivity() {
     private lateinit var  rvcar : RecyclerView
     private var list : ArrayList<Car> = arrayListOf()
-    private lateinit var lyListcar : LinearLayout
+//    private lateinit var btnPilihMobil : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,29 +29,36 @@ class MainActivity : AppCompatActivity() {
 
         showRecyclerView()
 
-//        lyListcar = findViewById(R.id.ly_item_rowcar_rv)
+//        btnPilihOnclick(list[i])
+
+
+
+//        btnPilihMobil = findViewById(R.id.btnPilih)
 
 
 
 
     }
-    private fun showSelectedHero(car: Car) {
-        Toast.makeText(this, "Kamu memilih " + car.name, Toast.LENGTH_SHORT).show()
-    }
+//    private fun setData() {
+//        var tvName : TextView = itemView.findViewById(R.id.tv_item_name)
+//        var tvDetail : TextView = itemView.findViewById(R.id.tv_item_detail)
+//        var ivgambar : ImageView = itemView.findViewById(R.id.iv_circle)
+//    }
+
+//    private fun btnPilihOnclick(list : ArrayList<Car>){
+//        val moveDetailCar = Intent(this@MainActivity,DetailCar::class.java)
+//            moveDetailCar.putExtra(DetailCar.EXTRA_PAKET,list)
+//            startActivity(moveDetailCar)
+//    }
+
 
     private fun showRecyclerView(){
         rvcar.layoutManager = LinearLayoutManager(this)
         val caradapter = CarAdapter(list)
         rvcar.adapter = caradapter
 
-        
-
-//        caradapter.setOnItemClickCallback(object : CarAdapter.OnItemClickCallback{
-//            override fun onItemClicked(data: Car) {
-//                showSelectedHero(data)
-//            }
-//        })
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main,menu)

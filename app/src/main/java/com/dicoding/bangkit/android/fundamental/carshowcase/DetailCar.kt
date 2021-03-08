@@ -17,12 +17,10 @@ class DetailCar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_car)
-
         val ivFotoReceived : ImageView = findViewById(R.id.iv_detail_received)
         val tvDetailCarReceived : TextView  = findViewById(R.id.tv_detail_Received)
-
-//        setDataView()
-        val foto = intent.getStringExtra(EXTRA_FOTO)
+//        val foto = intent.getStringExtra(EXTRA_FOTO)
+        val foto = intent.getIntExtra(EXTRA_FOTO,0)
         val detail = intent.getStringExtra(EXTRA_DETAIL)
 
         tvDetailCarReceived.text = detail
@@ -31,16 +29,4 @@ class DetailCar : AppCompatActivity() {
                 .apply(RequestOptions())
                 .into(ivFotoReceived)
     }
-
-//    private fun setDataView() {
-//        val ivFotoReceived : ImageView = findViewById(R.id.iv_detail_received)
-//        val tvDetailCarReceived : TextView  = findViewById(R.id.tv_detail_Received)
-//
-//        val itemcarlist = intent.getParcelableExtra<Car>(EXTRA_PAKET)
-//        Glide.with(this)
-//                .load(itemcarlist.gambar)
-//                .into(ivFotoReceived)
-//        tvDetailCarReceived.text = itemcarlist.detail
-//
-//    }
 }

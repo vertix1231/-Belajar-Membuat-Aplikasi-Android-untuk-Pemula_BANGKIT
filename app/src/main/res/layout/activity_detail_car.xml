@@ -27,5 +27,37 @@
         android:id="@+id/tv_detail_Received">
     </TextView>
 
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:id="@+id/cvAboutGw"-->
+<!--        android:src="@drawable/bolaprofilirsyadd2"-->
+<!--        >-->
+<!--    </de.hdodenhof.circleimageview.CircleImageView>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/tv_Aboutnamagw"-->
+<!--        android:text="@string/irsyad_muhammad_andre"-->
+<!--        android:layout_below="@+id/cvAboutGw"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:textSize="20dp"-->
+<!--        android:layout_centerHorizontal="true">-->
+<!--    </TextView>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="20dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:id="@+id/tvAboutEmailGw"-->
+<!--        android:text="@string/a0010002_bangkit_academy"-->
+<!--        android:layout_below="@+id/tv_Aboutnamagw"-->
+<!--        android:layout_centerHorizontal="true">-->
+
+<!--    </TextView>-->
+
 
 </RelativeLayout>

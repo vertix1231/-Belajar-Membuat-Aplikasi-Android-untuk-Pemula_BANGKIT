@@ -1,7 +1,10 @@
 package com.dicoding.bangkit.android.fundamental.carshowcase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
@@ -28,5 +31,24 @@ class DetailCar : AppCompatActivity() {
                 .load(foto)
                 .apply(RequestOptions())
                 .into(ivFotoReceived)
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
+        return super.onCreateOptionsMenu(menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.menu_home -> {
+                val moveahomeback = Intent(this@DetailCar,MainActivity::class.java)
+                startActivity(moveahomeback)
+                true
+            }
+            R.id.menu_about -> {
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
     private lateinit var  rvcar : RecyclerView
     private var list : ArrayList<Car> = arrayListOf()
-//    private lateinit var btnPilihMobil : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,18 +31,19 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
         return true
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        // Handle item selection
+        return when (item.itemId) {
             R.id.menu_home -> {
-                null
+                true
             }
             R.id.menu_about -> {
-                val moveAbout = Intent(this@MainActivity,About::class.java)
-                startActivity(moveAbout)
+                val moveabout = Intent(this@MainActivity,About::class.java)
+                startActivity(moveabout)
+                true
             }
+            else -> super.onOptionsItemSelected(item)
         }
-
-        return super.onOptionsItemSelected(item)
     }
-
 }
